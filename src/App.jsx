@@ -10,6 +10,8 @@ import TesBahasa from './pages/TesBahasa'
 import PelatihanBahasa from './pages/PelatihanBahasa'
 import TerjemahanAbstrak from './pages/TerjemahanAbstrak'
 import TesBahasaD3S1 from './pages/TesBahasaD3S1'
+import TesBahasaS2S3 from './pages/TesBahasaS2S3'
+import TesBahasaOnline from './pages/TesBahasaOnline'
 
 import Program from './pages/Program'
 import Berita from './pages/Berita'
@@ -38,6 +40,21 @@ function App() {
           path="/layanan/tes-bahasa/d3-s1"
           element={<TesBahasaD3S1 />}
         />
+
+        <Route
+  path="/layanan/tes-bahasa/s2-s3"
+  element={<TesBahasaS2S3 />}
+/>
+
+<Route
+  path="/layanan/tes-bahasa/online"
+  element={<TesBahasaOnline />}
+/>
+
+<Route
+  path="/layanan/pelatihan-bahasa"
+  element={<PelatihanBahasa />}
+/>
 
         <Route
           path="/layanan/pelatihan-bahasa"

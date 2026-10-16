@@ -1,0 +1,391 @@
+.pelatihan-page {
+  --pelatihan-green: #087443;
+  --pelatihan-dark: #064b30;
+  --pelatihan-light: #eaf6ee;
+  --pelatihan-text: #18382a;
+  --pelatihan-muted: #6a7d71;
+  color: var(--pelatihan-text);
+  background: #fff;
+}
+
+.pelatihan-container {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.pelatihan-hero {
+  padding: 26px 0 76px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 92% 12%, #ffffff15 0 140px, transparent 141px),
+    linear-gradient(125deg, #064b30, #087443 65%, #15965a);
+}
+
+.pelatihan-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 58px;
+  color: #d9eee2;
+  font-size: 13px;
+}
+
+.pelatihan-breadcrumb a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pelatihan-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.pelatihan-hero-content {
+  max-width: 760px;
+}
+
+.pelatihan-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #16824f;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.pelatihan-hero .pelatihan-eyebrow {
+  color: #b9edce;
+}
+
+.pelatihan-hero h1 {
+  margin: 0 0 20px;
+  font-size: clamp(36px, 5vw, 54px);
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.pelatihan-hero-content > p {
+  max-width: 680px;
+  margin: 0;
+  color: #e0f0e7;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.pelatihan-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.pelatihan-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 47px;
+  padding: 0 21px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.pelatihan-btn:hover {
+  transform: translateY(-2px);
+}
+
+.pelatihan-btn-primary {
+  color: #fff;
+  background: var(--pelatihan-green);
+}
+
+.pelatihan-btn-primary:hover {
+  background: var(--pelatihan-dark);
+}
+
+.pelatihan-hero .pelatihan-btn-primary {
+  color: var(--pelatihan-dark);
+  background: #fff;
+}
+
+.pelatihan-hero .pelatihan-btn-primary:hover {
+  background: #eaf6ee;
+}
+
+.pelatihan-btn-outline {
+  border-color: #ffffff85;
+  color: #fff;
+  background: transparent;
+}
+
+.pelatihan-btn-outline:hover {
+  background: #ffffff14;
+}
+
+.pelatihan-section {
+  padding: 68px 0 80px;
+}
+
+.pelatihan-heading {
+  max-width: 660px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.pelatihan-heading h2,
+.pelatihan-benefit h2 {
+  margin: 0 0 12px;
+  color: var(--pelatihan-dark);
+  font-size: clamp(27px, 3vw, 36px);
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+}
+
+.pelatihan-heading p,
+.pelatihan-benefit-copy > p {
+  margin: 0;
+  color: var(--pelatihan-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.pelatihan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.pelatihan-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 27px;
+  border: 1px solid #e0eae3;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 35px #123b200a;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pelatihan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 42px #123b2014;
+}
+
+.pelatihan-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.pelatihan-number {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 12px;
+  color: var(--pelatihan-green);
+  background: var(--pelatihan-light);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.pelatihan-tag {
+  padding: 7px 10px;
+  border-radius: 999px;
+  color: var(--pelatihan-green);
+  background: var(--pelatihan-light);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.pelatihan-card h3 {
+  margin: 0 0 12px;
+  color: var(--pelatihan-dark);
+  font-size: 21px;
+}
+
+.pelatihan-card > p {
+  flex: 1;
+  margin: 0 0 26px;
+  color: var(--pelatihan-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.pelatihan-card-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 18px;
+  border-top: 1px solid #e6eee8;
+  color: var(--pelatihan-green);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.pelatihan-card-link:hover {
+  color: var(--pelatihan-dark);
+}
+
+.pelatihan-benefit {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  align-items: center;
+  gap: 40px;
+  margin-top: 60px;
+  padding: 38px;
+  border-radius: 18px;
+  background: #f3f8f4;
+}
+
+.pelatihan-benefit-copy {
+  max-width: 580px;
+}
+
+.pelatihan-benefit-copy > p {
+  margin-bottom: 25px;
+}
+
+.pelatihan-benefit-list {
+  display: grid;
+  gap: 17px;
+}
+
+.pelatihan-benefit-list > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.pelatihan-benefit-list > div > span {
+  display: grid;
+  flex: 0 0 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--pelatihan-green);
+  background: #dcefe2;
+  font-weight: 900;
+}
+
+.pelatihan-benefit-list p {
+  margin: 3px 0 0;
+  color: var(--pelatihan-text);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.pelatihan-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 30px;
+  padding: 25px 0;
+  border-bottom: 1px solid #e4ece6;
+}
+
+.pelatihan-contact h3 {
+  margin: 0 0 7px;
+  color: var(--pelatihan-dark);
+}
+
+.pelatihan-contact p {
+  margin: 0;
+  color: var(--pelatihan-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.pelatihan-contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 9px;
+}
+
+.pelatihan-contact-links a,
+.pelatihan-back-link {
+  color: var(--pelatihan-green);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.pelatihan-contact-links a:hover,
+.pelatihan-back-link:hover {
+  text-decoration: underline;
+}
+
+.pelatihan-back-link {
+  display: inline-block;
+  margin-top: 28px;
+}
+
+@media (max-width: 850px) {
+  .pelatihan-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pelatihan-benefit {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 560px) {
+  .pelatihan-container {
+    width: min(100% - 28px, 1120px);
+  }
+
+  .pelatihan-hero {
+    padding: 22px 0 54px;
+  }
+
+  .pelatihan-breadcrumb {
+    margin-bottom: 40px;
+    font-size: 12px;
+  }
+
+  .pelatihan-hero h1 {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .pelatihan-hero-content > p {
+    font-size: 14px;
+  }
+
+  .pelatihan-section {
+    padding: 48px 0 58px;
+  }
+
+  .pelatihan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pelatihan-card {
+    padding: 24px;
+  }
+
+  .pelatihan-benefit {
+    margin-top: 40px;
+    padding: 24px;
+  }
+
+  .pelatihan-contact {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .pelatihan-contact-links {
+    align-items: flex-start;
+  }
+}

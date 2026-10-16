@@ -1,0 +1,665 @@
+.terjemahan-page {
+--terjemahan-green: #087443;
+--terjemahan-dark: #064b30;
+--terjemahan-light: #eaf6ee;
+--terjemahan-text: #18382a;
+--terjemahan-muted: #6a7d71;
+color: var(--terjemahan-text);
+background: #fff;
+}
+
+.terjemahan-container {
+width: min(1120px, calc(100% - 40px));
+margin: 0 auto;
+}
+
+.terjemahan-hero {
+position: relative;
+overflow: hidden;
+padding: 26px 0 78px;
+color: #fff;
+background:
+radial-gradient(circle at 90% 12%, #ffffff17 0 155px, transparent 156px),
+radial-gradient(circle at 72% 110%, #ffffff10 0 190px, transparent 191px),
+linear-gradient(125deg, #064b30, #087443 65%, #15965a);
+}
+
+.terjemahan-breadcrumb {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+margin-bottom: 62px;
+color: #d9eee2;
+font-size: 13px;
+}
+
+.terjemahan-breadcrumb a {
+color: inherit;
+text-decoration: none;
+}
+
+.terjemahan-breadcrumb a {
+text-decoration: underline;
+}
+
+.terjemahan-hero-content {
+max-width: 760px;
+}
+
+.terjemahan-eyebrow {
+display: inline-block;
+margin-bottom: 13px;
+color: #16824f;
+font-size: 12px;
+font-weight: 800;
+letter-spacing: 1.5px;
+}
+
+.terjemahan-hero .terjemahan-eyebrow {
+color: #b9edce;
+}
+
+.terjemahan-hero h1 {
+max-width: 720px;
+margin: 0 0 20px;
+font-size: clamp(36px, 5vw, 56px);
+line-height: 1.12;
+letter-spacing: -1.7px;
+}
+
+.terjemahan-hero-content > p {
+max-width: 650px;
+margin: 0;
+color: #e0f0e7;
+font-size: 15px;
+line-height: 1.9;
+}
+
+.terjemahan-hero-actions {
+display: flex;
+flex-wrap: wrap;
+gap: 12px;
+margin-top: 29px;
+}
+
+.terjemahan-btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 12px;
+min-height: 48px;
+padding: 0 21px;
+border: 1px solid transparent;
+border-radius: 8px;
+font-size: 13px;
+font-weight: 800;
+text-decoration: none;
+transition: transform 0.2s, background 0.2s;
+}
+
+.terjemahan-btn {
+transform: translateY(-2px);
+}
+
+.terjemahan-btn-primary {
+color: #fff;
+background: var(--terjemahan-green);
+}
+
+.terjemahan-btn-primary {
+background: var(--terjemahan-dark);
+}
+
+.terjemahan-hero .terjemahan-btn-primary {
+color: var(--terjemahan-dark);
+background: #fff;
+}
+
+.terjemahan-hero .terjemahan-btn-primary {
+background: #eaf6ee;
+}
+
+.terjemahan-btn-outline {
+border-color: #ffffff80;
+color: #fff;
+background: transparent;
+}
+
+.terjemahan-btn-outline {
+background: #ffffff15;
+}
+
+.terjemahan-hero-meta {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-top: 26px;
+}
+
+.terjemahan-hero-meta > span {
+display: grid;
+flex: 0 0 24px;
+height: 24px;
+place-items: center;
+border-radius: 50%;
+color: var(--terjemahan-dark);
+background: #b9edce;
+font-weight: 900;
+}
+
+.terjemahan-hero-meta p {
+margin: 0;
+color: #e0f0e7;
+font-size: 12px;
+line-height: 1.7;
+}
+
+.terjemahan-section {
+padding: 70px 0 80px;
+}
+
+.terjemahan-intro {
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+gap: 28px;
+margin-bottom: 32px;
+}
+
+.terjemahan-intro h2,
+.terjemahan-payment-heading h2,
+.terjemahan-process-heading h2 {
+margin: 0;
+color: var(--terjemahan-dark);
+font-size: clamp(27px, 3vw, 36px);
+letter-spacing: -0.8px;
+}
+
+.terjemahan-intro > p {
+max-width: 410px;
+margin: 0;
+color: var(--terjemahan-muted);
+font-size: 14px;
+line-height: 1.8;
+}
+
+.terjemahan-language-grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 22px;
+}
+
+.terjemahan-language-card {
+padding: 28px;
+border: 1px solid #e0eae3;
+border-radius: 16px;
+background: #fff;
+box-shadow: 0 10px 35px #123b200a;
+transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.terjemahan-language-card {
+transform: translateY(-4px);
+box-shadow: 0 16px 35px #123b2012;
+}
+
+.terjemahan-language-top {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 27px;
+}
+
+.terjemahan-language-code {
+display: grid;
+width: 42px;
+height: 42px;
+place-items: center;
+border-radius: 12px;
+color: var(--terjemahan-green);
+background: var(--terjemahan-light);
+font-size: 12px;
+font-weight: 900;
+}
+
+.terjemahan-language-symbol {
+display: grid;
+min-width: 54px;
+height: 54px;
+padding: 0 10px;
+place-items: center;
+border-radius: 14px;
+color: var(--terjemahan-green);
+background: #f3f8f4;
+font-size: 19px;
+font-weight: 800;
+}
+
+.terjemahan-language-label {
+display: block;
+margin-bottom: 8px;
+color: var(--terjemahan-muted);
+font-size: 10px;
+font-weight: 800;
+letter-spacing: 1.2px;
+}
+
+.terjemahan-language-card h3 {
+margin: 0;
+color: var(--terjemahan-dark);
+font-size: 21px;
+}
+
+.terjemahan-language-arrow {
+display: flex;
+align-items: center;
+gap: 10px;
+margin: 22px 0;
+color: var(--terjemahan-muted);
+font-size: 12px;
+}
+
+.terjemahan-language-arrow span {
+display: grid;
+width: 30px;
+height: 30px;
+place-items: center;
+border-radius: 50%;
+color: var(--terjemahan-green);
+background: var(--terjemahan-light);
+font-size: 17px;
+}
+
+.terjemahan-registration {
+display: grid;
+grid-template-columns: 1.1fr 0.9fr;
+align-items: center;
+gap: 38px;
+margin-top: 60px;
+padding: 38px;
+border-radius: 18px;
+background: #f3f8f4;
+}
+
+.terjemahan-registration-copy h2 {
+max-width: 490px;
+margin: 0 0 14px;
+color: var(--terjemahan-dark);
+font-size: clamp(26px, 3vw, 34px);
+line-height: 1.2;
+letter-spacing: -0.8px;
+}
+
+.terjemahan-registration-copy > p {
+margin: 0 0 24px;
+color: var(--terjemahan-muted);
+font-size: 14px;
+line-height: 1.9;
+}
+
+.terjemahan-registration-visual {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+min-height: 245px;
+justify-content: center;
+padding: 30px;
+border-radius: 14px;
+color: #fff;
+background: linear-gradient(145deg, #075b39, #128652);
+}
+
+.terjemahan-document-icon {
+display: grid;
+width: 65px;
+height: 65px;
+margin-bottom: 23px;
+place-items: center;
+border-radius: 15px;
+color: #b9edce;
+background: #ffffff15;
+}
+
+.terjemahan-document-icon svg {
+width: 42px;
+height: 42px;
+}
+
+.terjemahan-visual-caption {
+margin-bottom: 10px;
+color: #b9edce;
+font-size: 10px;
+font-weight: 800;
+letter-spacing: 1.4px;
+}
+
+.terjemahan-registration-visual h3 {
+margin: 0 0 8px;
+font-size: 21px;
+}
+
+.terjemahan-registration-visual > p {
+margin: 0;
+color: #e0f0e7;
+font-size: 13px;
+line-height: 1.8;
+}
+
+.terjemahan-payment {
+display: grid;
+grid-template-columns: 0.8fr 1.2fr;
+align-items: start;
+gap: 45px;
+margin-top: 76px;
+}
+
+.terjemahan-payment-heading > p,
+.terjemahan-process-heading > p {
+margin: 13px 0 0;
+color: var(--terjemahan-muted);
+font-size: 14px;
+line-height: 1.8;
+}
+
+.terjemahan-bank-card {
+overflow: hidden;
+padding: 27px;
+border: 1px solid #e0eae3;
+border-radius: 16px;
+background: #fff;
+box-shadow: 0 10px 35px #123b200a;
+}
+
+.terjemahan-bank-header {
+display: flex;
+align-items: center;
+gap: 14px;
+padding-bottom: 24px;
+border-bottom: 1px solid #e5ede7;
+}
+
+.terjemahan-bank-mark {
+display: grid;
+width: 53px;
+height: 53px;
+place-items: center;
+border-radius: 13px;
+color: #fff;
+background: var(--terjemahan-green);
+font-size: 14px;
+font-weight: 900;
+}
+
+.terjemahan-bank-header > div {
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
+
+.terjemahan-bank-header span {
+color: var(--terjemahan-muted);
+font-size: 10px;
+font-weight: 800;
+letter-spacing: 1px;
+}
+
+.terjemahan-bank-header h3 {
+margin: 0;
+color: var(--terjemahan-dark);
+font-size: 19px;
+}
+
+.terjemahan-account-number,
+.terjemahan-account-name {
+display: flex;
+flex-direction: column;
+gap: 9px;
+padding: 21px 0;
+border-bottom: 1px solid #e5ede7;
+}
+
+.terjemahan-account-number > span,
+.terjemahan-account-name > span {
+color: var(--terjemahan-muted);
+font-size: 12px;
+}
+
+.terjemahan-account-number strong {
+color: var(--terjemahan-dark);
+font-size: 27px;
+letter-spacing: 1.4px;
+}
+
+.terjemahan-account-name strong {
+color: var(--terjemahan-text);
+font-size: 14px;
+overflow-wrap: anywhere;
+}
+
+.terjemahan-payment-note {
+display: flex;
+align-items: flex-start;
+gap: 10px;
+margin-top: 19px;
+}
+
+.terjemahan-payment-note > span {
+color: var(--terjemahan-green);
+font-weight: 900;
+}
+
+.terjemahan-payment-note p {
+margin: 0;
+color: var(--terjemahan-muted);
+font-size: 12px;
+line-height: 1.8;
+}
+
+.terjemahan-process {
+margin-top: 82px;
+scroll-margin-top: 100px;
+}
+
+.terjemahan-process-heading {
+max-width: 620px;
+margin-bottom: 34px;
+}
+
+.terjemahan-timeline {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 22px;
+}
+
+.terjemahan-step {
+display: flex;
+align-items: flex-start;
+gap: 17px;
+padding: 25px;
+border: 1px solid #e0eae3;
+border-radius: 14px;
+background: #fff;
+}
+
+.terjemahan-step-number {
+display: grid;
+flex: 0 0 44px;
+height: 44px;
+place-items: center;
+border-radius: 12px;
+color: var(--terjemahan-green);
+background: var(--terjemahan-light);
+font-size: 12px;
+font-weight: 900;
+}
+
+.terjemahan-step-content h3 {
+margin: 2px 0 8px;
+color: var(--terjemahan-dark);
+font-size: 17px;
+}
+
+.terjemahan-step-content p {
+margin: 0;
+color: var(--terjemahan-muted);
+font-size: 13px;
+line-height: 1.8;
+}
+
+.terjemahan-help {
+display: flex;
+align-items: center;
+gap: 17px;
+margin-top: 58px;
+padding: 25px;
+border: 1px solid #e0eae3;
+border-radius: 14px;
+background: #f8fbf8;
+}
+
+.terjemahan-help-icon {
+display: grid;
+flex: 0 0 42px;
+height: 42px;
+place-items: center;
+border-radius: 50%;
+color: var(--terjemahan-green);
+background: #e2f2e7;
+font-size: 21px;
+font-weight: 800;
+}
+
+.terjemahan-help-copy {
+flex: 1;
+}
+
+.terjemahan-help-copy h3 {
+margin: 0 0 6px;
+color: var(--terjemahan-dark);
+font-size: 16px;
+}
+
+.terjemahan-help-copy p {
+margin: 0;
+color: var(--terjemahan-muted);
+font-size: 13px;
+line-height: 1.8;
+}
+
+.terjemahan-help-link,
+.terjemahan-back-link {
+color: var(--terjemahan-green);
+font-size: 13px;
+font-weight: 800;
+text-decoration: none;
+white-space: nowrap;
+}
+
+.terjemahan-help-link,
+.terjemahan-back-link {
+text-decoration: underline;
+}
+
+.terjemahan-back-link {
+display: inline-block;
+margin-top: 28px;
+}
+
+@media (max-width: 800px) {
+.terjemahan-registration,
+.terjemahan-payment {
+grid-template-columns: 1fr;
+}
+
+.terjemahan-payment {
+gap: 25px;
+}
+
+.terjemahan-registration {
+gap: 25px;
+}
+}
+
+@media (max-width: 600px) {
+.terjemahan-container {
+width: min(100% - 28px, 1120px);
+}
+
+.terjemahan-hero {
+padding: 22px 0 55px;
+}
+
+.terjemahan-breadcrumb {
+margin-bottom: 42px;
+font-size: 12px;
+}
+
+.terjemahan-hero h1 {
+font-size: 36px;
+letter-spacing: -1px;
+}
+
+.terjemahan-hero-content > p {
+font-size: 14px;
+}
+
+.terjemahan-section {
+padding: 48px 0 58px;
+}
+
+.terjemahan-intro {
+align-items: flex-start;
+flex-direction: column;
+gap: 12px;
+}
+
+.terjemahan-language-grid,
+.terjemahan-timeline {
+grid-template-columns: 1fr;
+}
+
+.terjemahan-language-card {
+padding: 24px;
+}
+
+.terjemahan-registration {
+margin-top: 42px;
+padding: 23px;
+}
+
+.terjemahan-registration-visual {
+min-height: 210px;
+padding: 23px;
+}
+
+.terjemahan-payment,
+.terjemahan-process {
+margin-top: 55px;
+}
+
+.terjemahan-bank-card {
+padding: 22px;
+}
+
+.terjemahan-account-number strong {
+font-size: 24px;
+}
+
+.terjemahan-step {
+padding: 20px;
+}
+
+.terjemahan-help {
+align-items: flex-start;
+flex-wrap: wrap;
+padding: 21px;
+}
+
+.terjemahan-help-copy {
+flex-basis: calc(100% - 60px);
+}
+
+.terjemahan-help-link {
+margin-left: 59px;
+}
+}
