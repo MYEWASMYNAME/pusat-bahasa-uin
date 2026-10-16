@@ -1,18 +1,22 @@
+
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
+  const [testTrainingOpen, setTestTrainingOpen] = useState(false)
+  const [translationOpen, setTranslationOpen] = useState(false)
 
   const dropdownRef = useRef(null)
 
   const closeMenu = () => {
     setMenuOpen(false)
     setServicesOpen(false)
+    setTestTrainingOpen(false)
+    setTranslationOpen(false)
   }
 
-  // Tutup dropdown jika klik di luar
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -20,6 +24,8 @@ function Navbar() {
         !dropdownRef.current.contains(event.target)
       ) {
         setServicesOpen(false)
+        setTestTrainingOpen(false)
+        setTranslationOpen(false)
       }
     }
 
@@ -33,11 +39,12 @@ function Navbar() {
     }
   }, [])
 
-  // Tutup menu dengan tombol Escape
   useEffect(() => {
     const handleEscape = (event) => {
       if (event.key === 'Escape') {
         setServicesOpen(false)
+        setTestTrainingOpen(false)
+        setTranslationOpen(false)
         setMenuOpen(false)
       }
     }
@@ -51,11 +58,15 @@ function Navbar() {
 
   const toggleServices = () => {
     setServicesOpen((prev) => !prev)
+    setTestTrainingOpen(false)
+    setTranslationOpen(false)
   }
 
   const toggleMobileMenu = () => {
     setMenuOpen((prev) => !prev)
     setServicesOpen(false)
+    setTestTrainingOpen(false)
+    setTranslationOpen(false)
   }
 
   return (
@@ -122,21 +133,72 @@ function Navbar() {
             </button>
 
             <div className="dropdown-menu">
-              <Link to="/layanan" onClick={closeMenu}>
-                Tes Dan Pelatihan
-              </Link>
 
-              <Link to="/layanan/kursus" onClick={closeMenu}>
-                Terjemahan
-              </Link>
+              {/* TES DAN PELATIHAN */}
+              <div
+                className={`nav-subdropdown ${
+                  testTrainingOpen ? 'subdropdown-open' : ''
+                }`}
+              >
+                <button
+                  type="button"
+                  className="nav-subdropdown-toggle"
+                  aria-expanded={testTrainingOpen}
+                  onClick={() => {
+                    setTestTrainingOpen((prev) => !prev)
+                    setTranslationOpen(false)
+                  }}
+                >
+                  Tes dan Pelatihan
+                  <span aria-hidden="true">›</span>
+                </button>
 
-              {/* <Link to="/layanan/tes" onClick={closeMenu}>
-                Tes Kemampuan Bahasa
-              </Link>
+                <div className="dropdown-submenu">
+                  <Link
+                    to="/layanan/tes-bahasa"
+                    onClick={closeMenu}
+                  >
+                    Tes Bahasa Asing
+                  </Link>
 
-              <Link to="/layanan/terjemahan" onClick={closeMenu}>
-                Jasa Terjemahan
-              </Link> */}
+                  <Link
+                    to="/layanan/pelatihan-bahasa"
+                    onClick={closeMenu}
+                  >
+                    Pelatihan Bahasa Asing
+                  </Link>
+                </div>
+              </div>
+
+              {/* TERJEMAHAN */}
+              <div
+                className={`nav-subdropdown ${
+                  translationOpen ? 'subdropdown-open' : ''
+                }`}
+              >
+                <button
+                  type="button"
+                  className="nav-subdropdown-toggle"
+                  aria-expanded={translationOpen}
+                  onClick={() => {
+                    setTranslationOpen((prev) => !prev)
+                    setTestTrainingOpen(false)
+                  }}
+                >
+                  Terjemahan
+                  <span aria-hidden="true">›</span>
+                </button>
+
+                <div className="dropdown-submenu">
+                  <Link
+                    to="/layanan/terjemahan-abstrak"
+                    onClick={closeMenu}
+                  >
+                    Jasa Terjemahan Abstrak
+                  </Link>
+                </div>
+              </div>
+
             </div>
           </div>
 

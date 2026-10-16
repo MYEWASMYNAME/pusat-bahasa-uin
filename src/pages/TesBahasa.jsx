@@ -2,291 +2,191 @@
 import { Link } from 'react-router-dom'
 import './TesBahasa.css'
 
-const langkah = [
+const layananTes = [
   {
     nomor: '01',
-    judul: 'Buat akun',
+    kategori: 'MAHASISWA D3 / S1',
+    judul: 'Tes Bahasa Arab dan Inggris Offline',
+    tipe: 'PAPER-BASED',
     deskripsi:
-      'Buka portal pendaftaran dan lengkapi data diri dengan benar untuk membuat akun.',
+      'Layanan tes kemahiran Bahasa Arab dan Inggris untuk mahasiswa program Diploma dan Sarjana.',
+    gambar:
+      'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=80',
+    alt: 'Peralatan belajar dan lembar ujian di atas meja',
+    fitur: [
+      'Khusus mahasiswa D3 dan S1',
+      'Pendaftaran akun secara online',
+      'Jadwal dan tarif tersedia di sistem',
+    ],
+    tujuan: '/layanan/tes-bahasa/d3-s1',
+    tombol: 'Lihat Detail Layanan',
   },
   {
     nomor: '02',
-    judul: 'Aktivasi email',
+    kategori: 'MAHASISWA S2 / S3',
+    judul: 'Tes dan Pelatihan Bahasa Asing',
+    tipe: 'PAPER-BASED',
     deskripsi:
-      'Periksa inbox email yang kamu daftarkan, kemudian klik tautan aktivasi akun.',
+      'Program tes kompetensi dan pelatihan Bahasa Arab maupun Inggris untuk mahasiswa Pascasarjana.',
+    gambar:
+      'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80',
+    alt: 'Mahasiswa mengikuti kegiatan pembelajaran bersama',
+    fitur: [
+      'Pelatihan mulai Rp300.000',
+      'Tes kompetensi mulai Rp200.000',
+      'Tersedia paket pelatihan dan tes',
+    ],
+    tujuan: '/layanan/tes-bahasa/s2-s3',
+    tombol: 'Lihat Tarif dan Detail',
   },
   {
     nomor: '03',
-    judul: 'Pilih layanan tes',
+    kategori: 'MAHASISWA DAN UMUM',
+    judul: 'Tes Bahasa Inggris Online',
+    tipe: 'MOBILE-BASED',
     deskripsi:
-      'Masuk ke dashboard, pilih layanan tes yang dibutuhkan, lalu ikuti petunjuknya.',
+      'Tes kemahiran Bahasa Inggris online melalui smartphone dengan layanan tes dari British Council.',
+    gambar:
+      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80',
+    alt: 'Seseorang menggunakan perangkat digital untuk belajar',
+    fitur: [
+      'Empat kali tes resmi',
+      'Pelaksanaan secara online',
+      'Akun aktif selama tujuh hari',
+    ],
+    tujuan: '/layanan/tes-bahasa/online',
+    tombol: 'Lihat Detail Layanan',
   },
 ]
 
-const informasi = [
-  'Satu mahasiswa cukup memiliki satu akun untuk mengakses seluruh layanan P2B.',
-  'Pembuatan akun gratis. Biaya dikenakan sesuai tarif layanan yang dipilih.',
-  'Jadwal, tarif, dan teknis pembayaran tersedia pada setiap layanan tes.',
-]
-
-const linkDaftar =
-  'https://layanan.pb.uin-suska.ac.id/register.php'
-
 function TesBahasa() {
   return (
-    <main className="tb-page">
-      <section className="tb-hero">
-        <div className="tb-hero-shape tb-shape-one" />
-        <div className="tb-hero-shape tb-shape-two" />
-
-        <div className="tb-container tb-hero-inner">
-          <nav className="tb-breadcrumb" aria-label="Breadcrumb">
+    <main className="tes-page">
+      <section className="tes-hero">
+        <div className="tes-container">
+          <div className="tes-breadcrumb">
             <Link to="/">Beranda</Link>
             <span>/</span>
             <Link to="/layanan">Layanan</Link>
             <span>/</span>
-            <span>Tes Bahasa</span>
-          </nav>
-
-          <div className="tb-hero-grid">
-            <div className="tb-hero-copy">
-              <span className="tb-eyebrow">
-                <span className="tb-eyebrow-dot" />
-                LAYANAN PUSAT BAHASA
-              </span>
-
-              <h1>
-                Bahasa Arab
-                <br />
-                <span>& Inggris.</span>
-                <br />
-                <span className="tb-title-outline">Offline</span>
-              </h1>
-
-              <p className="tb-hero-description">
-                Layanan tes kemampuan bahasa untuk mahasiswa
-                D3 dan S1 dengan metode paper-based.
-                Persiapkan langkah akademikmu bersama Pusat
-                Bahasa UIN SUSKA RIAU.
-              </p>
-
-              <div className="tb-hero-actions">
-                <a
-                  href={linkDaftar}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="tb-button tb-button-light"
-                >
-                  Daftar Sekarang <span>↗</span>
-                </a>
-
-                <a href="#panduan" className="tb-text-link">
-                  Pelajari langkahnya <span>↓</span>
-                </a>
-              </div>
-
-              <div className="tb-hero-note">
-                <span className="tb-check">✓</span>
-                Pembuatan akun gratis
-              </div>
-            </div>
-
-            <div className="tb-visual" aria-label="Ilustrasi bahasa">
-              <div className="tb-visual-top">
-                <span>LANGUAGE TEST</span>
-                <span>01 — 03</span>
-              </div>
-
-             
-<div className="tb-visual-art tb-language-art">
-  <span className="tb-art-english">English</span>
-
-  <span className="tb-art-arabic" lang="ar" dir="rtl">
-    اللغة العربية
-  </span>
-
-  <span className="tb-art-divider" />
-
-  <span className="tb-art-caption">
-    TWO LANGUAGES.
-    <br />
-    ONE JOURNEY.
-  </span>
-</div>
-
-
-              <div className="tb-visual-bottom">
-                <span>ARABIC</span>
-                <span className="tb-visual-bottom-dot">●</span>
-                <span>ENGLISH</span>
-                <span className="tb-visual-bottom-year">P2B / UIN</span>
-              </div>
-            </div>
+            <span>Tes Bahasa Asing</span>
           </div>
 
-          <div className="tb-hero-footer">
-            <span>TES KEMAMPUAN BAHASA</span>
-            <span>MAHASISWA D3 & S1</span>
-            <span>PAPER-BASED TEST</span>
+          <div className="tes-hero-content">
+            <span className="tes-eyebrow">
+              PUSAT PENGEMBANGAN BAHASA
+            </span>
+
+            <h1>
+              Tes Kemahiran
+              <br />
+              <span>Bahasa Asing</span>
+            </h1>
+
+            <p>
+              Tingkatkan kemampuan bahasa dan temukan layanan tes
+              yang sesuai dengan kebutuhan akademik Anda.
+            </p>
+
+            <a href="#pilihan-tes" className="tes-hero-button">
+              Jelajahi Layanan
+              <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+          <div className="tes-hero-decoration" aria-hidden="true">
+            <span>Ab</span>
+            <span>ب</span>
           </div>
         </div>
       </section>
 
-      <section className="tb-steps-section" id="panduan">
-        <div className="tb-container">
-          <div className="tb-section-heading">
-            <div>
-              <span className="tb-section-label">
-                PROSES PENDAFTARAN
-              </span>
-              <h2>
-                Tiga langkah.
-                <br />
-                <span>Satu akun untuk semua.</span>
-              </h2>
-            </div>
-
+      <section className="tes-services" id="pilihan-tes">
+        <div className="tes-container">
+          <div className="tes-section-heading">
+            <span className="tes-eyebrow">LAYANAN KAMI</span>
+            <h2>Pilih Layanan Tes</h2>
             <p>
-              Ikuti alur berikut untuk membuat akun dan
-              memilih layanan tes sesuai kebutuhanmu.
+              Tersedia pilihan tes offline dan online untuk mahasiswa
+              dari berbagai jenjang maupun peserta umum.
             </p>
           </div>
 
-          <div className="tb-steps-grid">
-            {langkah.map((item) => (
-              <article className="tb-step" key={item.nomor}>
-                <div className="tb-step-top">
-                  <span className="tb-step-number">{item.nomor}</span>
-                  <span className="tb-step-arrow">↗</span>
+          <div className="tes-card-grid">
+            {layananTes.map((layanan) => (
+              <article className="tes-card" key={layanan.nomor}>
+                <div className="tes-card-image">
+                  <img
+                    src={layanan.gambar}
+                    alt={layanan.alt}
+                    loading="lazy"
+                  />
+
+                  <span className="tes-card-number">
+                    {layanan.nomor}
+                  </span>
+
+                  <span className="tes-card-type">
+                    {layanan.tipe}
+                  </span>
                 </div>
 
-                <h3>{item.judul}</h3>
-                <p>{item.deskripsi}</p>
+                <div className="tes-card-content">
+                  <span className="tes-card-category">
+                    {layanan.kategori}
+                  </span>
+
+                  <h3>{layanan.judul}</h3>
+
+                  <p className="tes-card-description">
+                    {layanan.deskripsi}
+                  </p>
+
+                  <div className="tes-card-divider" />
+
+                  <ul className="tes-feature-list">
+                    {layanan.fitur.map((fitur) => (
+                      <li key={fitur}>
+                        <span aria-hidden="true">✓</span>
+                        {fitur}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link
+                    to={layanan.tujuan}
+                    className="tes-card-button"
+                  >
+                    {layanan.tombol}
+                    <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
               </article>
             ))}
           </div>
-        </div>
-      </section>
 
-      <section className="tb-info-section">
-        <div className="tb-container tb-info-grid">
-          <div className="tb-info-heading">
-            <span className="tb-section-label">
-              SEBELUM MENDAFTAR
-            </span>
-            <h2>
-              Informasi
-              <br />
-              <span>yang perlu kamu tahu.</span>
-            </h2>
-            <p>
-              Kenali ketentuan dasar sebelum memilih
-              layanan tes di Pusat Bahasa.
-            </p>
-          </div>
+          <div className="tes-help">
+            <div className="tes-help-icon" aria-hidden="true">
+              ?
+            </div>
 
-          <div className="tb-info-list">
-            {informasi.map((teks, index) => (
-              <div className="tb-info-item" key={teks}>
-                <span>0{index + 1}</span>
-                <p>{teks}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="tb-register-section">
-        <div className="tb-container">
-          <div className="tb-register-panel">
-            <div className="tb-register-decoration">→</div>
-
-            <div className="tb-register-copy">
-              <span className="tb-section-label">
-                MULAI LANGKAHMU
-              </span>
-              <h2>
-                Siap menguji
-                <br />
-                kemampuanmu?
-              </h2>
+            <div className="tes-help-content">
+              <h3>Butuh informasi lebih lanjut?</h3>
               <p>
-                Kunjungi portal resmi untuk membuat akun,
-                mengaktifkannya melalui email, dan memilih
-                layanan tes yang kamu butuhkan.
+                Hubungi Pusat Pengembangan Bahasa atau kunjungi
+                laman pendaftaran untuk informasi layanan.
               </p>
             </div>
 
-            <div className="tb-register-action">
-              <span className="tb-register-caption">
-                PORTAL PENDAFTARAN RESMI
-              </span>
-
-              <a
-                href={linkDaftar}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="tb-button tb-button-dark"
-              >
-                Buka Portal Pendaftaran <span>↗</span>
-              </a>
-
-              <span className="tb-register-free">
-                Gratis untuk pembuatan akun
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="tb-contact-section">
-        <div className="tb-container">
-          <div className="tb-contact-heading">
-            <span className="tb-section-label">
-              KAMI SIAP MEMBANTU
-            </span>
-            <h2>Ada yang ingin ditanyakan?</h2>
-            <p>
-              Hubungi Pusat Bahasa untuk mendapatkan informasi
-              lebih lanjut mengenai layanan tes.
-            </p>
-          </div>
-
-          <div className="tb-contact-grid">
             <a
-              href="https://wa.me/6282379823169"
+              href="https://layanan.pb.uin-suska.ac.id/register.php"
               target="_blank"
-              rel="noopener noreferrer"
-              className="tb-contact-card"
+              rel="noreferrer"
+              className="tes-help-button"
             >
-              <span className="tb-contact-icon">↗</span>
-              <span className="tb-contact-label">
-                WHATSAPP / TELEPON
-              </span>
-              <strong>0823-7982-3169</strong>
-              <span className="tb-contact-action">
-                Hubungi kami <span>→</span>
-              </span>
+              Laman Pendaftaran
+              <span aria-hidden="true">↗</span>
             </a>
-
-            <a
-              href="mailto:pb@uin-suska.ac.id"
-              className="tb-contact-card"
-            >
-              <span className="tb-contact-icon">✉</span>
-              <span className="tb-contact-label">
-                EMAIL INFORMASI
-              </span>
-              <strong>pb@uin-suska.ac.id</strong>
-              <span className="tb-contact-action">
-                Kirim email <span>→</span>
-              </span>
-            </a>
-          </div>
-
-          <div className="tb-bottom-nav">
-            <Link to="/layanan">← Kembali ke semua layanan</Link>
-            <span>PUSAT BAHASA UIN SUSKA RIAU</span>
           </div>
         </div>
       </section>
