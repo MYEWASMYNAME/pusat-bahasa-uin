@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -11,6 +10,7 @@ function Navbar() {
 
   const dropdownRef = useRef(null)
 
+  // Tutup semua menu
   const closeMenu = () => {
     setMenuOpen(false)
     setAboutOpen(false)
@@ -19,6 +19,7 @@ function Navbar() {
     setTranslationOpen(false)
   }
 
+  // Tutup dropdown ketika klik di luar navigasi
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -39,6 +40,7 @@ function Navbar() {
     }
   }, [])
 
+  // Tutup menu dengan tombol Escape
   useEffect(() => {
     const handleEscape = (event) => {
       if (event.key === 'Escape') {
@@ -53,6 +55,7 @@ function Navbar() {
     }
   }, [])
 
+  // Dropdown Tentang
   const toggleAbout = () => {
     setAboutOpen((prev) => !prev)
     setServicesOpen(false)
@@ -60,6 +63,7 @@ function Navbar() {
     setTranslationOpen(false)
   }
 
+  // Dropdown Layanan
   const toggleServices = () => {
     setServicesOpen((prev) => !prev)
     setAboutOpen(false)
@@ -67,6 +71,19 @@ function Navbar() {
     setTranslationOpen(false)
   }
 
+  // Submenu Tes dan Pelatihan
+  const toggleTestTraining = () => {
+    setTestTrainingOpen((prev) => !prev)
+    setTranslationOpen(false)
+  }
+
+  // Submenu Terjemahan
+  const toggleTranslation = () => {
+    setTranslationOpen((prev) => !prev)
+    setTestTrainingOpen(false)
+  }
+
+  // Hamburger menu mobile
   const toggleMobileMenu = () => {
     setMenuOpen((prev) => !prev)
     setAboutOpen(false)
@@ -109,18 +126,19 @@ function Navbar() {
 
         {/* NAVIGASI */}
         <nav
+          ref={dropdownRef}
           id="main-navigation"
           className={`nav-menu ${
             menuOpen ? 'nav-menu-open' : ''
           }`}
         >
+          {/* BERANDA */}
           <Link to="/" onClick={closeMenu}>
             Beranda
           </Link>
 
           {/* DROPDOWN TENTANG */}
           <div
-            ref={dropdownRef}
             className={`nav-dropdown ${
               aboutOpen ? 'dropdown-open' : ''
             }`}
@@ -191,10 +209,7 @@ function Navbar() {
                   type="button"
                   className="nav-subdropdown-toggle"
                   aria-expanded={testTrainingOpen}
-                  onClick={() => {
-                    setTestTrainingOpen((prev) => !prev)
-                    setTranslationOpen(false)
-                  }}
+                  onClick={toggleTestTraining}
                 >
                   Tes dan Pelatihan
                   <span aria-hidden="true">›</span>
@@ -227,10 +242,7 @@ function Navbar() {
                   type="button"
                   className="nav-subdropdown-toggle"
                   aria-expanded={translationOpen}
-                  onClick={() => {
-                    setTranslationOpen((prev) => !prev)
-                    setTestTrainingOpen(false)
-                  }}
+                  onClick={toggleTranslation}
                 >
                   Terjemahan
                   <span aria-hidden="true">›</span>
@@ -245,9 +257,11 @@ function Navbar() {
                   </Link>
                 </div>
               </div>
+
             </div>
           </div>
 
+          {/* MENU LAINNYA */}
           <Link to="/program" onClick={closeMenu}>
             Program
           </Link>

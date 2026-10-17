@@ -259,7 +259,7 @@ return (
         </div>
       </section>
 
-      <section className="terjemahan-help">
+      {/* <section className="terjemahan-help">
         <div className="terjemahan-help-icon">?</div>
         <div className="terjemahan-help-copy">
           <h3>Butuh informasi lebih lanjut?</h3>
@@ -276,11 +276,11 @@ return (
         >
           Website Resmi <span>↗</span>
         </a>
-      </section>
+      </section> */}
 
-      <Link to="/layanan" className="terjemahan-back-link">
+      {/* <Link to="/layanan" className="terjemahan-back-link">
         ← Kembali ke semua layanan
-      </Link>
+      </Link> */}
     </div>
   </section>
 </main>
