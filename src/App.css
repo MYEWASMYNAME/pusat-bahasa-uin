@@ -1268,3 +1268,11 @@
   font-size: 18px;
   line-height: 1.8;
 }
+
+
+.logo-image {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  flex-shrink: 0;
+}

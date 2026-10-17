@@ -73,15 +73,20 @@ function Navbar() {
     <header className="navbar">
       <div className="container nav-container">
 
-        {/* LOGO */}
-        <Link to="/" className="logo" onClick={closeMenu}>
-          <div className="logo-mark">U</div>
+       
+{/* LOGO */}
+<Link to="/" className="logo" onClick={closeMenu}>
+  <img
+    src="/UIN.png"
+    alt="Logo UIN SUSKA RIAU"
+    className="logo-image"
+  />
 
-          <div className="logo-text">
-            <span>PUSAT PENGEMBANGAN BAHASA</span>
-            <strong>UIN SUSKA RIAU</strong>
-          </div>
-        </Link>
+  <div className="logo-text">
+    <span>PUSAT PENGEMBANGAN BAHASA</span>
+    <strong>UIN SUSKA RIAU</strong>
+  </div>
+</Link>
 
         {/* HAMBURGER MOBILE */}
         <button
