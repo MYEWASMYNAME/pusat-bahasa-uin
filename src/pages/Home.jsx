@@ -8,7 +8,7 @@ function Home() {
           <div className="container hero-container">
             <div className="hero-content">
               <div className="hero-badge">
-                PUSAT PENGEMBANGAN BAHASA UIN SUSKA RIAU
+                PUSAT PENGEMBANGAN BAHASA
               </div>
 
               <h1>
