@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 
 import Home from './pages/Home'
 import Tentang from './pages/Tentang'
+import VisiMisi from './pages/VisiMisi'
 import Layanan from './pages/Layanan'
 
 import TesBahasa from './pages/TesBahasa'
@@ -26,6 +27,11 @@ function App() {
         {/* HALAMAN UTAMA */}
         <Route path="/" element={<Home />} />
         <Route path="/tentang" element={<Tentang />} />
+
+        <Route
+  path="/tentang/visi-misi"
+  element={<VisiMisi />}
+/>
 
         {/* HALAMAN LAYANAN */}
         <Route path="/layanan" element={<Layanan />} />

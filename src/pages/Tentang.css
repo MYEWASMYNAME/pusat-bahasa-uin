@@ -1,0 +1,238 @@
+
+.tentang-page {
+  background: #fffdf7;
+}
+
+.tentang-hero {
+  padding: 80px 0 70px;
+  background: linear-gradient(135deg, #edf7ef, #fffdf7);
+}
+
+.tentang-hero .container {
+  max-width: 1100px;
+}
+
+.tentang-hero h1 {
+  max-width: 850px;
+  margin: 16px 0;
+  color: #174b31;
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.2;
+}
+
+.tentang-hero h1 span {
+  color: #21834a;
+}
+
+.tentang-hero p {
+  max-width: 720px;
+  color: #59665e;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.section-label {
+  color: #21834a;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.tentang-identitas {
+  padding: 60px 0 30px;
+}
+
+.identitas-card {
+  padding: 36px;
+  border: 1px solid #e2eee4;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 12px 35px rgba(23, 75, 49, 0.05);
+}
+
+.identitas-card h2,
+.fungsi-card h2 {
+  margin: 12px 0;
+  color: #174b31;
+  font-size: clamp(24px, 3vw, 32px);
+}
+
+.identitas-card p,
+.fungsi-card p {
+  margin: 0;
+  color: #59665e;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.tentang-sejarah {
+  padding: 60px 0 80px;
+}
+
+.sejarah-heading {
+  max-width: 700px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.sejarah-heading h2 {
+  margin: 12px 0;
+  color: #174b31;
+  font-size: clamp(27px, 4vw, 38px);
+}
+
+.sejarah-heading p {
+  color: #68736b;
+  line-height: 1.8;
+}
+
+.sejarah-content {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.sejarah-content::before {
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: 100px;
+  width: 2px;
+  background: #d9eadd;
+  content: "";
+}
+
+.sejarah-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 32px;
+  padding-bottom: 38px;
+}
+
+.sejarah-item:last-child {
+  padding-bottom: 0;
+}
+
+.sejarah-tahun {
+  position: relative;
+  z-index: 1;
+  align-self: start;
+  padding: 10px 0;
+  color: #21834a;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.sejarah-detail {
+  padding: 24px;
+  border: 1px solid #e5eee6;
+  border-radius: 16px;
+  background: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sejarah-detail:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(23, 75, 49, 0.07);
+}
+
+.sejarah-detail h3 {
+  margin: 0 0 12px;
+  color: #174b31;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.sejarah-detail p {
+  margin: 0;
+  color: #59665e;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.tentang-fungsi {
+  padding: 0 0 80px;
+}
+
+.fungsi-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 36px;
+  border-radius: 20px;
+  background: #174b31;
+}
+
+.fungsi-card h2 {
+  color: #fff;
+}
+
+.fungsi-card p {
+  color: #e0ece3;
+}
+
+.fungsi-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: #dff1e3;
+  color: #174b31;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .tentang-hero {
+    padding: 56px 0 45px;
+  }
+
+  .tentang-identitas {
+    padding-top: 35px;
+  }
+
+  .identitas-card {
+    padding: 24px;
+  }
+
+  .tentang-sejarah {
+    padding: 45px 0 60px;
+  }
+
+  .sejarah-heading {
+    margin-bottom: 32px;
+    text-align: left;
+  }
+
+  .sejarah-content::before {
+    left: 5px;
+  }
+
+  .sejarah-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding-left: 25px;
+    padding-bottom: 28px;
+  }
+
+  .sejarah-tahun {
+    padding: 0;
+  }
+
+  .sejarah-detail {
+    padding: 20px;
+  }
+
+  .fungsi-card {
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .tentang-fungsi {
+    padding-bottom: 55px;
+  }
+}

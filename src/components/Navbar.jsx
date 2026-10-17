@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [aboutOpen, setAboutOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
   const [testTrainingOpen, setTestTrainingOpen] = useState(false)
   const [translationOpen, setTranslationOpen] = useState(false)
@@ -12,6 +13,7 @@ function Navbar() {
 
   const closeMenu = () => {
     setMenuOpen(false)
+    setAboutOpen(false)
     setServicesOpen(false)
     setTestTrainingOpen(false)
     setTranslationOpen(false)
@@ -23,6 +25,7 @@ function Navbar() {
         dropdownRef.current &&
         !dropdownRef.current.contains(event.target)
       ) {
+        setAboutOpen(false)
         setServicesOpen(false)
         setTestTrainingOpen(false)
         setTranslationOpen(false)
@@ -32,20 +35,14 @@ function Navbar() {
     document.addEventListener('mousedown', handleClickOutside)
 
     return () => {
-      document.removeEventListener(
-        'mousedown',
-        handleClickOutside
-      )
+      document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [])
 
   useEffect(() => {
     const handleEscape = (event) => {
       if (event.key === 'Escape') {
-        setServicesOpen(false)
-        setTestTrainingOpen(false)
-        setTranslationOpen(false)
-        setMenuOpen(false)
+        closeMenu()
       }
     }
 
@@ -56,14 +53,23 @@ function Navbar() {
     }
   }, [])
 
+  const toggleAbout = () => {
+    setAboutOpen((prev) => !prev)
+    setServicesOpen(false)
+    setTestTrainingOpen(false)
+    setTranslationOpen(false)
+  }
+
   const toggleServices = () => {
     setServicesOpen((prev) => !prev)
+    setAboutOpen(false)
     setTestTrainingOpen(false)
     setTranslationOpen(false)
   }
 
   const toggleMobileMenu = () => {
     setMenuOpen((prev) => !prev)
+    setAboutOpen(false)
     setServicesOpen(false)
     setTestTrainingOpen(false)
     setTranslationOpen(false)
@@ -73,20 +79,19 @@ function Navbar() {
     <header className="navbar">
       <div className="container nav-container">
 
-       
-{/* LOGO */}
-<Link to="/" className="logo" onClick={closeMenu}>
-  <img
-    src="/UIN.png"
-    alt="Logo UIN SUSKA RIAU"
-    className="logo-image"
-  />
+        {/* LOGO */}
+        <Link to="/" className="logo" onClick={closeMenu}>
+          <img
+            src="/UIN.png"
+            alt="Logo UIN SUSKA RIAU"
+            className="logo-image"
+          />
 
-  <div className="logo-text">
-    <span>PUSAT PENGEMBANGAN BAHASA</span>
-    <strong>UIN SUSKA RIAU</strong>
-  </div>
-</Link>
+          <div className="logo-text">
+            <span>PUSAT PENGEMBANGAN BAHASA</span>
+            <strong>UIN SUSKA RIAU</strong>
+          </div>
+        </Link>
 
         {/* HAMBURGER MOBILE */}
         <button
@@ -113,13 +118,50 @@ function Navbar() {
             Beranda
           </Link>
 
-          <Link to="/tentang" onClick={closeMenu}>
-            Tentang
-          </Link>
+          {/* DROPDOWN TENTANG */}
+          <div
+            ref={dropdownRef}
+            className={`nav-dropdown ${
+              aboutOpen ? 'dropdown-open' : ''
+            }`}
+          >
+            <button
+              type="button"
+              className="nav-dropdown-toggle"
+              aria-expanded={aboutOpen}
+              aria-haspopup="true"
+              onClick={toggleAbout}
+            >
+              Tentang
+              <span className="dropdown-arrow" aria-hidden="true">
+                ⌄
+              </span>
+            </button>
+
+            <div className="dropdown-menu">
+              <Link to="/tentang" onClick={closeMenu}>
+                Profil P2B
+              </Link>
+
+              <Link to="/tentang/sejarah" onClick={closeMenu}>
+                Sejarah
+              </Link>
+
+              <Link to="/tentang/visi-misi" onClick={closeMenu}>
+                Visi dan Misi
+              </Link>
+
+              <Link
+                to="/tentang/struktur-organisasi"
+                onClick={closeMenu}
+              >
+                Struktur Organisasi
+              </Link>
+            </div>
+          </div>
 
           {/* DROPDOWN LAYANAN */}
           <div
-            ref={dropdownRef}
             className={`nav-dropdown ${
               servicesOpen ? 'dropdown-open' : ''
             }`}
@@ -203,7 +245,6 @@ function Navbar() {
                   </Link>
                 </div>
               </div>
-
             </div>
           </div>
 
